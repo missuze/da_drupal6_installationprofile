@@ -82,26 +82,3 @@ $term["parent"] = array($tids[0]);
 $tids[1] = install_taxonomy_add_term($vid, $term["name"], $term["description"], $term);
 
 
-
-/********************************
- *     FILTERS AND FORMATS      *
- ********************************/
-$formats_map[1] = install_add_format('Filtered HTML', '1');
-install_add_format(array ( $roles_map[1], $roles_map[2], $roles_map[4], $roles_map[3],), $formats_map[1]);
-$formats_map[2] = install_add_format('Full HTML', '1');
-install_add_format(array ( $roles_map[3],), $formats_map[2]);
-$formats_map[3] = install_add_format('PHP code', '0');
-install_add_format(array (), $formats_map[3]);
-install_set_filter($formats_map[1], 'filter', '0', '1');
-install_set_filter($formats_map[1], 'spamspan', '0', '10');
-install_set_filter($formats_map[1], 'filter', '3', '10');
-install_set_filter($formats_map[2], 'filter', '3', '10');
-install_set_filter($formats_map[2], 'spamspan', '0', '10');
-install_set_filter($formats_map[3], 'php', '0', '0');
-install_set_filter($formats_map[1], 'filter', '1', '2');
-install_set_filter($formats_map[1], 'filter', '2', '0');
-install_set_filter($formats_map[2], 'filter', '1', '1');
-install_set_filter($formats_map[2], 'filter', '2', '0');
-
-
-}
