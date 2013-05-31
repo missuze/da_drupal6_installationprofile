@@ -82,3 +82,4 @@ $term["parent"] = array($tids[0]);
 $tids[1] = install_taxonomy_add_term($vid, $term["name"], $term["description"], $term);
 
 
+}
